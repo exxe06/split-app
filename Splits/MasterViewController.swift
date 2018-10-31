@@ -12,6 +12,7 @@ class MasterViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
 
     // MARK: - Segues
@@ -23,6 +24,8 @@ class MasterViewController: UITableViewController {
                 controller.image = imageArray[indexPath.row]
                 controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
                 controller.navigationItem.leftItemsSupplementBackButton = true
+                controller.navigationItem.title =  namesArray[indexPath.row].capitalized
+                controller.navigationController?.navigationBar.tintColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
             }
         }
     }
